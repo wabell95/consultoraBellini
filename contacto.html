@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header class="formato">
+        <div class="ancho">
+            <div class="logo">
+                <p> <a href="#"><img class="logo-imagen" src="imagenes/logo.png" alt=""></a></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="busqueda-activa.html">Busqueda Activa</a></li>
+                    <li><a href="quienes-somos.html">¿Quienes Somos?</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="lista">
+            <div class="ancho-lista caja">
+                <form id="miForm" action="/my-handling-form-page" method="post">
+                    <ul class="contacto1">
+                        <li>
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="user_name">
+                        </li>
+                        <li>
+                            <label for="surname">Apellido:</label>
+                            <input type="text" id="surname" name="user_surname">
+                        </li>
+                        <li>
+                            <label for="mail">E-mail:</label>
+                            <input type="email" id="mail" name="user_mail">
+                        </li>
+                        <li>
+                            <select name="EstadoCivil">
+                                <option value="value1" selected>Soltero/a</option>
+
+                                <option value="value2">Casado/a</option>
+                                <option value="value3">Divorciado/a</option>
+                                <option value="value4">Viudo/a</option>
+                            </select>
+                        </li>
+
+                        <li>
+                            <label><input type="checkbox" id="cbox1" value="first_checkbox"> ¿Desea recibir el
+                                newsletter?</label><br>
+
+                        </li>
+
+                        <li>
+                            <textarea name="comentarios" rows="10" cols="50">Comentarios</textarea>
+                        </li>
+                        <li>
+                            <input type="button" value="Limpiar Formulario" onclick="limpiarFormulario()">
+                            <input type="button" value="Enviar Formulario">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <script>
+            function limpiarFormulario() {
+                document.getElementById("miForm").reset();
+            }
+        </script>
+
+</body>
+
+</html>
